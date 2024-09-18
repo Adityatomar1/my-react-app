@@ -1,0 +1,59 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: my-react-app                     # The name of your React app
+  description: A simple React app for demonstration with CI/CD pipeline
+  tags:
+    - react
+    - frontend
+    - ci
+    - cd
+  annotations:
+    github.com/project-slug: "your-organization/my-react-app"  # GitHub repository URL
+    jenkins.io/github-folder: "your-jenkins-job-folder"        # Jenkins job folder for the CI/CD pipeline
+    jenkins.io/job-url: "https://jenkins.example.com/job/my-react-app-pipeline"  # Jenkins job URL for the pipeline
+    backstage.io/techdocs-ref: "url:https://docs.example.com/my-react-app"       # Link to any documentation
+spec:
+  type: website                         # Type of component
+  owner: team-frontend                  # The team responsible for this component
+  lifecycle: production                 # The lifecycle phase of the component
+  dependsOn:                            # Dependencies for the React app
+    - resource: my-database
+    - service: backend-api-service
+  providesApis:                         # APIs provided by this React app (if any)
+    - my-react-api
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: frontend-system                 # System grouping related frontend components
+  description: System containing all frontend components including the React app
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: backend-api-service             # API that this React app interacts with
+  description: Backend API for the React app
+spec:
+  type: openapi                         # Assuming it's an OpenAPI-compliant API
+  lifecycle: production
+  owner: team-backend
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: jenkins-pipeline
+  description: CI/CD pipeline for the React app
+  annotations:
+    jenkins.io/job-url: "https://jenkins.example.com/job/my-react-app-pipeline"  # Jenkins pipeline URL
+spec:
+  type: ci-pipeline                     # CI/CD pipeline type
+  owner: team-frontend                  # Owner of the pipeline
+  lifecycle: production
+
