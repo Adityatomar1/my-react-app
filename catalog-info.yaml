@@ -9,8 +9,8 @@ metadata:
     - ci
     - cd
   annotations:
-    github.com/project-slug: "your-organization/my-react-app"  # GitHub repository URL
-    jenkins.io/github-folder: "your-jenkins-job-folder"        # Jenkins job folder for the CI/CD pipeline
+    github.com/project-slug: "https://github.com/Adityatomar1/abc.git"  # GitHub repository URL
+    jenkins.io/github-folder: "./jenkinsfile"        # Jenkins job folder for the CI/CD pipeline
     jenkins.io/job-url: "https://jenkins.example.com/job/my-react-app-pipeline"  # Jenkins job URL for the pipeline
     backstage.io/techdocs-ref: "url:https://docs.example.com/my-react-app"       # Link to any documentation
 spec:
