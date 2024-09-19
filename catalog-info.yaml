@@ -27,3 +27,4 @@ spec:
     - service: backend-api-service
   providesApis:                         # APIs provided by this React app (if any)
     - my-react-api
+  system: public-websites
