@@ -9,7 +9,7 @@ metadata:
     - ci
     - cd
   links:
-      - url: http://localhost:52680
+      url: http://localhost:52680
       title: Admin Dashboard
       icon: dashboard
       type: admin-dashboard
