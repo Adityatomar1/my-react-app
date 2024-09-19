@@ -8,6 +8,11 @@ metadata:
     - frontend
     - ci
     - cd
+  links:
+      - url: http://localhost:52680
+      title: Admin Dashboard
+      icon: dashboard
+      type: admin-dashboard
   annotations:
     github.com/project-slug: "https://github.com/Adityatomar1/my-react-app.git"  # GitHub repository URL
     jenkins.io/github-folder: "./jenkinsfile"        # Jenkins job folder for the CI/CD pipeline
