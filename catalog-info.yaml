@@ -9,7 +9,7 @@ metadata:
     - ci
     - cd
   links:
-      url: https://github.com/Adityatomar1/my-react-app.git
+     - url: https://github.com/Adityatomar1/my-react-app.git
       title: github repo
   annotations:
     github.com/project-slug: "https://github.com/Adityatomar1/my-react-app.git"  # GitHub repository URL
