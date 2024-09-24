@@ -18,7 +18,7 @@ metadata:
     backstage.io/techdocs-ref: "url:https://docs.example.com/my-react-app"       # Link to any documentation
 spec:
   type: website                         # Type of component
-  owner: team-frontend                  # The team responsible for this component
+  owner: aditya                  # The team responsible for this component
   lifecycle: production                 # The lifecycle phase of the component
   providesApis:                         # APIs provided by this React app (if any)
     - my-react-api
